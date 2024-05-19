@@ -26,7 +26,6 @@ Ensure the following packages are included in the application:
    - If not installed, you can add them with:
      dotnet tool install --global dotnet-ef
 
-
 3. **Apply Initial Migration**
    - Open the Package Manager Console or a terminal.
    - Run the command to create the initial migration:
@@ -50,9 +49,9 @@ Ensure the following packages are included in the application:
 
 ### API Endpoints
 
-- **GET /api/users:** Retrieve a list of all users.
-- **GET /api/users/{id}:** Retrieve a user by their ID.
-- **POST /api/users:** Create a new user.
-- **PUT /api/users/{id}:** Update an existing user.
-- **DELETE /api/users/{id}:** Delete a user by their ID.
+- **GET /api/users/GetUsersList:** Retrieve a list of all users.
+- **GET /api/users/GetUserById/{id}:** Retrieve a user by their ID.
+- **POST /api/users/CreateUser:** Create a new user.
+- **PUT /api/users/UpdateUser/{id}:** Update an existing user.
+- **DELETE /api/users/DeleteUser/{id}:** Delete a user by their ID.
 
