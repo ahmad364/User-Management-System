@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagementSystem.Domain
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagementSystem.Infrastructure", "UserManagementSystem.Infrastructure\UserManagementSystem.Infrastructure.csproj", "{A6848BD7-6183-4AF2-B6A5-7151C7A09765}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserManagementSystem.Application", "UserManagementSystem.Application\UserManagementSystem.Application.csproj", "{08794DB2-9094-4285-9C5D-6E274220F37F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A6848BD7-6183-4AF2-B6A5-7151C7A09765}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6848BD7-6183-4AF2-B6A5-7151C7A09765}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6848BD7-6183-4AF2-B6A5-7151C7A09765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08794DB2-9094-4285-9C5D-6E274220F37F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08794DB2-9094-4285-9C5D-6E274220F37F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08794DB2-9094-4285-9C5D-6E274220F37F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08794DB2-9094-4285-9C5D-6E274220F37F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
