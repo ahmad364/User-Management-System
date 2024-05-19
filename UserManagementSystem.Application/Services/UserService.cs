@@ -16,12 +16,14 @@ namespace UserManagementSystem.Application.Services
     {
         private readonly IUserRepository _userRepository;
         private readonly IValidator<UserDto> _userValidator;
+        private readonly IValidator<User> _UserValidator;
         private readonly IMapper _mapper;
 
-        public UserService(IUserRepository userRepository, IMapper mapper, IValidator<UserDto> userDtoValidator)
+        public UserService(IUserRepository userRepository, IMapper mapper, IValidator<UserDto> userDtoValidator, IValidator<User> UserValidator)
         {
             _userRepository = userRepository;
             _userValidator = userDtoValidator;
+            _UserValidator = UserValidator;
             _mapper = mapper;
         }
 
@@ -35,7 +37,7 @@ namespace UserManagementSystem.Application.Services
             return await _userRepository.GetAllUsersAsync();
         }
 
-        public async Task AddUserAsync(UserDto user)
+        public async Task<User> AddUserAsync(UserDto user)
         {
             var validationResult = await _userValidator.ValidateAsync(user);
             if (!validationResult.IsValid)
@@ -45,25 +47,24 @@ namespace UserManagementSystem.Application.Services
 
             User userEntiry = _mapper.Map<User>(user);
             await _userRepository.AddUserAsync(userEntiry);
+
+            return userEntiry;
         }
 
-        public async Task UpdateUserAsync(int userId, UserDto user)
+        public async Task UpdateUserAsync(User user)
         {
-            var validationResult = await _userValidator.ValidateAsync(user);
+            var validationResult = await _UserValidator.ValidateAsync(user);
             if (!validationResult.IsValid)
             {
                 throw new ValidationException(validationResult.Errors);
             }
 
-            User userEntiry = _mapper.Map<User>(user);
-            userEntiry.UserId = userId;
-
-            await _userRepository.UpdateUserAsync(userEntiry);
+            await _userRepository.UpdateUserAsync(user);
         }
 
-        public async Task DeleteUserAsync(int id)
+        public async Task DeleteUserAsync(User user)
         {
-            await _userRepository.DeleteUserAsync(id);
+            await _userRepository.DeleteUserAsync(user);
         }
     }
 }

@@ -1,9 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UserManagementSystem.Domain.Entities;
 using UserManagementSystem.Domain.Interfaces;
 using UserManagementSystem.Infrastructure.DBContext;
@@ -42,14 +37,10 @@ namespace UserManagementSystem.Infrastructure.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteUserAsync(int id)
+        public async Task DeleteUserAsync(User user)
         {
-            var user = await _context.Users.FindAsync(id);
-            if (user != null)
-            {
-                _context.Users.Remove(user);
-                await _context.SaveChangesAsync();
-            }
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
         }
     }
 }

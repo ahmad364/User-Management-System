@@ -12,8 +12,8 @@ namespace UserManagementSystem.Application.Interfaces
     {
         Task<User> GetUserByIdAsync(int id);
         Task<IEnumerable<User>> GetUsersAsync();
-        Task AddUserAsync(UserDto user);
-        Task UpdateUserAsync(int userId, UserDto user);
-        Task DeleteUserAsync(int id);
+        Task<User> AddUserAsync(UserDto user);
+        Task UpdateUserAsync(User user);
+        Task DeleteUserAsync(User user);
     }
 }
