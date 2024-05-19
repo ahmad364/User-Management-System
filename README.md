@@ -1,5 +1,10 @@
 # User-Management-System
 
+## Clone the Repository
+To get started, clone this repository to your local machine:
+git clone <repository_url>
+cd User-Management-System
+
 ## Prerequisites
 Ensure the following packages are included in the application:
 - **EF Core**
