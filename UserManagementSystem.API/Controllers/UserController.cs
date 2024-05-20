@@ -45,7 +45,7 @@ namespace UserManagementSystem.API.Controllers
         public async Task<ActionResult<User>> CreateUser(UserDto userDto)
         {
             var user = await _userService.AddUserAsync(userDto);
-            // Returns a 201 Created response with the location of the newly created user
+            // Returns a 201 Created response with the newly created user
             return CreatedAtAction(nameof(GetUserById), new { id = user.UserId }, user);
         }
 
