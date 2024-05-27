@@ -1,18 +1,24 @@
-# User-Management-System
+# User Management System
+
+## Overview
+
+The User Management System is a web application that allows for CRUD (Create, Read, Update, Delete) operations on user accounts. It is built using .NET Core and follows the principles of Clean Architecture. The application ensures data integrity and consistency through Fluent Validation, manages data access using the Repository pattern, and uses EF Core for database operations.
+
+## Features
+
+- Create, Read, Update, and Delete user accounts.
+- User attributes: `UserId`, `UserName`, `CNIC`, `PhoneNumber`.
+- Input data validation using Fluent Validation.
+- Clean Architecture implementation.
+- Error handling with global exception handling middleware.
+- Repository pattern for data access and transactional integrity.
+- EF Core for database operations.
+- API documentation with Swagger.
 
 ## Clone the Repository
 To get started, clone this repository to your local machine:
 git clone <repository_url>
 cd User-Management-System
-
-## Prerequisites
-Ensure the following packages are included in the application:
-- **EF Core**
-- **EF Core SQL Server**
-- **EF Core Tools**
-- **FluentValidation**
-- **Swagger**
-- **AutoMapper**
 
 ## Steps to Run the Application
 
