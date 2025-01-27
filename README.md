@@ -2,7 +2,7 @@
 
 ## Overview
 
-The User Management System is a web application that allows for CRUD (Create, Read, Update, Delete) operations on user accounts. It is built using .NET Core and follows the principles of Clean Architecture. The application ensures data integrity and consistency through Fluent Validation, manages data access using the Repository pattern, and uses EF Core for database operations.
+The User Management System is a WEB-API application that allows for CRUD (Create, Read, Update, Delete) operations on user accounts. It is built using .NET Core and follows the principles of Clean Architecture. The application ensures data integrity and consistency through Fluent Validation, manages data access using the Repository pattern, and uses EF Core for database operations.
 
 ## Features
 
